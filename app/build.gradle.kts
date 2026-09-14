@@ -4,6 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.s8137077assignment2"
+
     compileSdk {
         version = release(37)
     }
@@ -25,6 +26,7 @@ android {
             }
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -32,20 +34,37 @@ android {
 }
 
 dependencies {
+
+    // AndroidX
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
     implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(libs.androidx.junit)
+    implementation(libs.androidx.recyclerview)
 
-    implementation(libs.retrofit)
-    implementation(libs.retrofit.converter.gson)
-
+    // Lifecycle / ViewModel
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.lifecycle.livedata.ktx)
 
-    implementation(libs.androidx.recyclerview)
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+
+    // OkHttp
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
+
+    // Koin - Dependency Injection
+    implementation(libs.koin.android)
+
+    // Unit tests
+    testImplementation(libs.junit)
+    testImplementation(libs.kotlinx.coroutines.test)
+
+    // Android tests
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.gson)
 }
