@@ -138,20 +138,24 @@ JUnit is used as the testing framework.
 
 ## Project Structure
 
-The project is organised into separate components for maintainability.
+s8137077Assignment2/
+        ├── app/
+        │   └── src/
+        │       └── main/
+        │           ├── kotlin+java/
+        │           │   └── com.example.s8137077assignment2/
+        │           │       ├── data/
+        │           │       ├── di/
+        │           │       ├── network/
+        │           │       ├── ui/
+        │           │       └── MainApplication.kt
+        │           │
+        │           └── res/
+        │
+        ├── build.gradle.kts
+        ├── settings.gradle.kts
+        └── README.md
 
-```text
-app/
-└── src/
-    └── kotlin+java/
-            └── com.example.s8137077assignment2/
-            │       ├── data/
-            │       ├── di/
-            │       ├── network/
-            │       ├── ui/
-            │       └── MainApplication/
-            │ 
-            └── res/
 ```
 
 > The exact package and folder structure may vary depending on the final implementation.
